@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+    --color-primary: #dc8068;
+    --color-secondary: #664d42;
+    --color-button: #e6a391;
+    --color-button-hover: #c94f2f;
+    --color-background: #372726;
+    --color-menu: rgba(54,46,41,0.6);
+    --font-main: "Roboto", serif;
+    --font-title: "Dancing Script", cursive;
+}
