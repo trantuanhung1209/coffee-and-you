@@ -137,6 +137,7 @@ a {
             .inner-search {
                 padding: 30px 10px;
                 position: relative;
+                color: white;
 
                 i {
                     font-size: 20px;
@@ -217,6 +218,7 @@ a {
             .inner-cart {
                 padding: 30px 10px;
                 position: relative;
+                color: white;
 
                 i {
                     font-size: 20px;
@@ -393,6 +395,7 @@ a {
             .inner-user {
                 padding: 30px 10px;
                 position: relative;
+                color: white;
 
                 i {
                     font-size: 20px;
@@ -460,11 +463,8 @@ a {
 
 /* main */
 .inner-main {
-    height: 100vh;
     margin-top: -90px;
-    padding-top: 90px;
 }
-
 /* end main */
 
 /* footer */

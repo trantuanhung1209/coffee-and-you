@@ -145,6 +145,26 @@ const header = () => {
                 innerSearchBox.style.display = "none";
             }
         });
+
+        const innerOrder = document.querySelector(".inner-order");
+        if (innerOrder) {
+            innerOrder.addEventListener("click", (event) => {
+                event.preventDefault(); // Ngăn chặn hành vi mặc định
+                
+                if (window.location.pathname.includes("home")) {
+                    const section = document.getElementById("section-7");
+                    if (section) {
+                        section.scrollIntoView({ behavior: "smooth" });
+                    }
+                } else {
+                    // Nếu không ở trang home, thay đổi button để mở modal
+                    innerOrder.setAttribute("type", "button");
+                    innerOrder.classList.add("btn", "btn-primary");
+                    innerOrder.setAttribute("data-bs-toggle", "modal");
+                    innerOrder.setAttribute("data-bs-target", "#exampleModal");
+                }
+            });
+        }
     }
 }
 header();
@@ -234,3 +254,33 @@ const copyRight = () => {
 };
 copyRight();
 // end copy right
+
+// popup-modal order 
+const popupModalOrder = () => {
+    const popupModal = document.querySelector(".inner-popup");
+    const popupModalTemplate = `
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    `;
+
+    if (popupModal) {
+        popupModal.innerHTML = popupModalTemplate;
+    }
+};
+popupModalOrder();
+// end popup-modal order
