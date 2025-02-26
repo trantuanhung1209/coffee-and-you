@@ -6,7 +6,7 @@ window.onload = () => {
     setTimeout(() => {
         document.getElementById("loading-screen").style.display = "none";
         document.getElementById("main-content").style.display = "block";
-    }, 800); // Thời gian loading (3 giây)
+    }, 800); 
 };
 // end loader
 
@@ -148,20 +148,21 @@ const header = () => {
 
         const innerOrder = document.querySelector(".inner-order");
         if (innerOrder) {
+            if (!window.location.pathname.includes("home")) {
+                innerOrder.setAttribute("type", "button");
+                innerOrder.classList.add("btn", "btn-primary");
+                innerOrder.setAttribute("data-bs-toggle", "modal");
+                innerOrder.setAttribute("data-bs-target", "#exampleModal");
+            }
+    
             innerOrder.addEventListener("click", (event) => {
-                event.preventDefault(); // Ngăn chặn hành vi mặc định
-                
+                event.preventDefault(); 
+    
                 if (window.location.pathname.includes("home")) {
                     const section = document.getElementById("section-7");
                     if (section) {
                         section.scrollIntoView({ behavior: "smooth" });
                     }
-                } else {
-                    // Nếu không ở trang home, thay đổi button để mở modal
-                    innerOrder.setAttribute("type", "button");
-                    innerOrder.classList.add("btn", "btn-primary");
-                    innerOrder.setAttribute("data-bs-toggle", "modal");
-                    innerOrder.setAttribute("data-bs-target", "#exampleModal");
                 }
             });
         }
@@ -256,6 +257,18 @@ copyRight();
 // end copy right
 
 // popup-modal order 
+const validatePhoneNumber = (phoneNumber) => {
+    const re = /^[0-9]{10}$/;
+    return re.test(phoneNumber);
+}
+
+const formatDate = (date) => {
+    const dateObject = new Date(date);
+    const year = dateObject.getFullYear();
+    const month = dateObject.getMonth() + 1;
+    const day = dateObject.getDate();
+    return `${day}/${month}/${year}`;
+};
 const popupModalOrder = () => {
     const popupModal = document.querySelector(".inner-popup");
     const popupModalTemplate = `
@@ -263,15 +276,48 @@ const popupModalOrder = () => {
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+                    <h1 class="modal-title fs-5" id="exampleModalLabel">Điền thông tin đặt bàn</h1>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <div class="inner-content">
+                        <div class="row">
+                            <div class="col-12">
+                                <form class="inner-form" id="myForm" action="/submit">
+                                    <div class="inner-form-group">
+                                        <label for="form-number">Số người</label>
+                                        <input type="number" name="number" id="form-number">
+                                    </div>
+                                    <div class="inner-form-group">
+                                        <label for="form-date">Ngày đặt</label>
+                                        <input type="date" name="date" id="form-date">
+                                    </div>
+                                    <div class="inner-form-group">
+                                        <label for="form-time">Thời gian</label>
+                                        <input type="time" name="time" id="form-time">
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-6">
+                                            <label for="fullName">Họ tên</label>
+                                            <input type="text" name="fullName" id="fullName">
+                                        </div>
+                                        <div class="col-6">
+                                            <label for="phone">Số điện thoại</label>
+                                            <input type="number" name="phone" id="phone">
+                                        </div>
+                                    </div>
+                                    <div class="inner-form-group">
+                                        <label for="form-note">Ghi chú</label>
+                                        <textarea name="note" id="form-note" cols="30" rows="10"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                    <button type="button" class="btn button-close" data-bs-dismiss="modal">Close</button>
+                    <button type="submit" form="myForm" class="inner-button">Đặt bàn</button>
                 </div>
             </div>
         </div>
@@ -280,6 +326,117 @@ const popupModalOrder = () => {
 
     if (popupModal) {
         popupModal.innerHTML = popupModalTemplate;
+
+        const innerForm = document.querySelector(".inner-form");
+        if (innerForm) {
+            innerForm.addEventListener("submit", (e) => {
+                e.preventDefault();
+                const number = innerForm.number.value;
+                const date = innerForm.date.value;
+                const time = innerForm.time.value;
+                const fullName = innerForm.fullName.value;
+                const phone = innerForm.phone.value;
+                const note = innerForm.note.value;
+
+                if (!number || number <= 0) {
+                    alert("Vui lòng nhập số người hợp lệ");
+                    return;
+                }
+
+                if (!date) {
+                    alert("Vui lòng chọn ngày đặt bàn");
+                    return;
+                }
+
+                if (!time) {
+                    alert("Vui lòng chọn thời gian đặt bàn");
+                    return;
+                }
+
+                if (!fullName) {
+                    alert("Vui lòng nhập họ tên");
+                    return;
+                }
+
+                if (!phone || !validatePhoneNumber(phone)) {
+                    alert("Vui lòng nhập số điện thoại hợp lệ");
+                    return;
+                }
+
+                if (!note) {
+                    alert("Vui lòng nhập ghi chú");
+                    return;
+                }
+
+                if (number && date && time && fullName && phone && note) {
+                    innerForm.reset();
+                    const modalBackdrop = document.querySelector('.modal-backdrop');
+                    if (modalBackdrop) { 
+                        modalBackdrop.style.display = 'none';
+                    }
+                    const modalElement = document.getElementById('exampleModal');
+                    const modalInstance = bootstrap.Modal.getInstance(modalElement); // Lấy instance của modal
+                    if (modalInstance) {
+                        modalInstance.hide(); // Đóng modal đúng cách
+                    }
+                    document.body.style.overflow = "auto"; 
+                    document.body.style.paddingRight = "0px";
+                }
+
+                // Hiển thị popup xác nhận
+                const sectionPopup = document.querySelector('.section-popup');
+                if (sectionPopup) {
+                    sectionPopup.style.display = 'flex';
+                    sectionPopup.style.opacity = '1';
+                    sectionPopup.style.pointerEvents = 'auto';
+
+                    const popupBody = sectionPopup.querySelector('.inner-popup-body');
+                    const popupContentTemplate = `
+                    <p style="font-weight: 700; margin-bottom: 20px; font-size: 18px;">
+                        Thông tin đặt bàn của bạn đã được xác nhận! 🎉
+                    </p>
+                    <div class="inner-info">
+                        <p><b>Xin chào</b> &nbsp; <span>${fullName}</span></p>
+                        <p>Chúng tôi rất vui được thông báo rằng đặt bàn của bạn đã được xác nhận với thông tin sau:
+                        </p>
+                        <p><b>Tên:</b> &nbsp; <span>${fullName}</span></p>
+                        <p><b>Số điện thoại:</b> &nbsp; <span>${phone}</span></p>
+                        <p><b>Ngày:</b> &nbsp; <span>${formatDate(date)}</span></p>
+                        <p><b>Giờ:</b> &nbsp; <span>${time}</span></p>
+                        <p><b>Số lượng người:</b> &nbsp; <span>${number}</span></p>
+                        <p>
+                            <b>Lưu ý</b>: Vui lòng đến trước 15 phút để đảm bảo trải nghiệm tốt nhất. Nếu cần thay
+                            đổi hoặc hủy đặt bàn,
+                            vui lòng liên hệ qua số
+                            <a href="tel:0353133235" style="color: var(--background-color-button);">0353133235</a>.
+                        </p>
+                        <p>Cảm ơn và hẹn gặp lại bạn sớm!</p>
+                    </div>
+                    <div class="inner-action">
+                        <button class="inner-button">Xác nhận</button>
+                    </div>
+                    `;
+                    popupBody.innerHTML = popupContentTemplate;
+
+                    // Đóng popup khi nhấn nút "Xác nhận" hoặc nút đóng
+                    const closePopup = () => {
+                        sectionPopup.style.display = 'none';
+                        sectionPopup.style.opacity = '0';
+                        sectionPopup.style.pointerEvents = 'none';
+                    };
+
+                    popupBody.querySelector('.inner-button').addEventListener('click', closePopup);
+                    sectionPopup.querySelector('.inner-popup-close').addEventListener('click', closePopup);
+
+                    sectionPopup.querySelector('.inner-popup-content').addEventListener('click', (e) => {
+                        e.stopPropagation();
+                    });
+
+                    // Đóng popup khi click bên ngoài
+                    sectionPopup.addEventListener('click', closePopup);
+                }
+            });
+        }
     }
 };
 popupModalOrder();
