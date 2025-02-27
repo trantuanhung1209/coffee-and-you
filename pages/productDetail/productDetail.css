@@ -1,2 +1,388 @@
 @import url('../../shared/css/style.css');
 @import url('../../shared/css/variables.css');
+
+.inner-main {
+    padding-top: 90px;
+}
+
+.inner-breadcumb {
+    color: white;
+    background-color: #d7d7d7a1;
+}
+
+.inner-breadcumb ul li a {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.section-1 {
+
+    .inner-left {
+        .inner-top {
+
+            .inner-image {
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            .inner-content {
+
+                .inner-title {
+                    font-size: 40px;
+                    font-weight: 500;
+                    color: var(--color-secondary);
+                    font-family: var(--font-title);
+                }
+
+                .inner-price {
+                    margin-bottom: 20px;
+
+                    .inner-new-price {
+                        font-size: 30px;
+                        font-weight: 700;
+                        color: black;
+                        margin: 0;
+                    }
+
+                    .inner-old-price {
+                        font-size: 16px;
+                        font-weight: 500;
+                        color: rgb(180, 180, 180);
+                        text-decoration: line-through;
+                        margin: 0;
+                    }
+
+                    .inner-save-price {
+                        font-size: 16px;
+                        font-weight: 400;
+                        color: rgb(180, 180, 180);
+                        margin: 0;
+                    }
+                }
+
+                .inner-action {
+                    margin-bottom: 40px;
+
+                    .quantity-selector {
+                        margin-bottom: 20px;
+
+                        label {
+                            font-size: 16px;
+                            font-weight: 500;
+                            color: black;
+                            display: block;
+                            margin-bottom: 5px;
+                        }
+
+                        .inner-button-input {
+                            display: flex;
+                            gap: 10px;
+                            align-items: center;
+
+                            .quantity-btn {
+                                background-color: var(--color-button);
+                                color: white;
+                                font-size: 20px;
+                                font-weight: 500;
+                                width: 40px;
+                                height: 40px;
+                                border: none;
+                                cursor: pointer;
+                                border-radius: 8px;
+                            }
+
+                            input {
+                                background-color: var(-color-secondary);
+                                color: black;
+                                font-size: 16px;
+                                font-weight: 500;
+                                width: 40px;
+                                height: 40px;
+                                border: none;
+                                text-align: center;
+                                border-radius: 8px;
+                                outline: none;
+                                background-color: white;
+                                border: 1px solid var(-color-button);
+                            }
+
+                            /* Ẩn mũi tên trong ô input */
+                            input[type="number"]::-webkit-inner-spin-button,
+                            input[type="number"]::-webkit-outer-spin-button {
+                                -webkit-appearance: none;
+                                margin: 0;
+                            }
+                        }
+                    }
+
+                    .inner-button {
+                        margin-left: 0;
+
+                        button {
+                            background-color: var(--color-button);
+                            color: black;
+                            font-size: 16px;
+                            font-weight: 500;
+                            padding: 10px 20px;
+                            border: none;
+                            cursor: pointer;
+                            border-radius: 8px;
+                            transition: all 0.3s;
+                            text-transform: uppercase;
+
+                            &:hover {
+                                background-color: var(--color-button-hover);
+                            }
+                        }
+
+                        .inner-button-order {
+                            background-color: var(--color-button);
+                            color: white;
+                            font-size: 16px;
+                            font-weight: 500;
+                            padding: 10px 20px;
+                            border: none;
+                            cursor: pointer;
+                            border-radius: 8px;
+                            transition: all 0.3s;
+                            text-transform: uppercase;
+                            text-decoration: none;
+                            display: inline-block;
+                            text-align: center;
+
+                            &:hover {
+                                background-color: var(--color-button-hover);
+                            }
+                        }
+
+                        .inner-button-order {
+                            background-color: #d83a3a;
+
+                            &:hover {
+                                background-color: #c72f2fb7;
+                            }
+                        }
+                    }
+                }
+
+                .inner-voucher {
+                    padding: 45px 15px 15px 15px;
+                    border: 1px dashed var(--color-button);
+                    border-radius: 8px;
+                    position: relative;
+
+                    .inner-voucher-title {
+                        font-size: 18px;
+                        font-weight: 700;
+                        color: var(--color-secondary);
+                        padding: 5px 15px;
+                        display: inline-flex;
+                        gap: 10px;
+                        align-items: center;
+                        background-color: var(--color-primary);
+                        border: 2px solid var(--color-button);
+                        position: absolute;
+                        top: -24px;
+                        border-radius: 20px;
+                    }
+
+                    .inner-voucher-content {
+                        font-size: 16px;
+                        font-weight: 500;
+                        color: var(--color-secondary);
+                        margin-top: 10px;
+
+                        ul {
+                            list-style: none;
+                            padding: 0;
+                            margin: 0;
+
+                            li {
+                                display: flex;
+                                align-items: center;
+                                gap: 10px;
+                                padding: 5px 0;
+
+                                i {
+                                    font-size: 12px;
+                                    display: inline-flex;
+                                    align-items: center;
+                                    justify-content: center;
+                                    border: 1px solid black;
+                                    width: 20px;
+                                    height: 20px;
+                                    border-radius: 50%;
+                                }
+
+                                span {
+                                    font-size: 16px;
+                                    font-weight: 400;
+                                    color: black;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+
+            @media screen and (max-width: 767.98px) {
+                .inner-wrap {
+                    flex-wrap: wrap;
+
+                    .inner-image {
+                        width: 100% !important;
+                    }
+
+                    .inner-content {
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
+
+        .inner-bottom {
+            padding: 40px 0;
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                border-bottom: 1px solid black;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                li {
+
+                    h3 {
+                        font-size: 20px;
+                        font-weight: 700;
+                        color: black;
+                        padding: 10px 15px;
+                        text-transform: uppercase;
+                    }
+                }
+            }
+
+            .inner-description {
+                font-size: 16px;
+                font-weight: 400;
+                color: black;
+                padding: 20px 0;
+            }
+        }
+    }
+
+    .inner-right {
+        .inner-top {
+            overflow: hidden;
+            border: 1px solid var(--color-button);
+            border-radius: 8px;
+            margin-bottom: 20px;
+
+            .inner-title {
+                background-color: var(--color-button);
+                padding: 10px 18px;
+                border-radius: 8px 8px 0 0;
+
+                h3 {
+                    font-size: 16px;
+                    font-weight: 700;
+                    color: var(--color-secondary);
+                    text-transform: uppercase;
+                    font-family: var(--font-title);
+                }
+            }
+
+            .inner-list {
+                padding: 10px 16px;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                .inner-item {
+                    display: flex;
+                    gap: 10px;
+
+                    .inner-image {
+                        width: 35%;
+                        height: 90px;
+                        border-radius: 8px;
+                        overflow: hidden;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+
+                    .inner-content {
+                        width: 65%;
+
+                        .inner-name {
+                            font-size: 18px;
+                            font-weight: 700;
+                            color: black;
+                            margin: 0;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-overflow: ellipsis;
+
+                            a {
+                                color: black;
+
+                                &:hover {
+                                    color: var(--color-button);
+                                }
+                            }
+                        }
+
+                        .inner-price {
+                            font-size: 16px;
+                            font-weight: 700;
+                            color: #d83a3a;
+                            margin: 0;
+                        }
+
+                        .inner-button {
+                            margin-top: 5px;
+                            background-color: var(--color-button);
+                            color: var(--color-secondary);
+                            font-size: 16px;
+                            font-weight: 500;
+                            padding: 5px 10px;
+                            border: none;
+                            cursor: pointer;
+                            border-radius: 8px;
+                            transition: all 0.3s;
+                            box-shadow: 0 3px #b1762a;
+
+                            &:hover {
+                                background-color: var(--color-button-hover);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1199.98px) {
+
+        .inner-wrap {
+            flex-wrap: wrap;
+
+            .inner-left {
+                width: 100%;
+            }
+
+            .inner-right {
+                width: 100%;
+            }
+        }
+    }
+}

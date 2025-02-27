@@ -18,6 +18,21 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 // // end observer content pour
 
+//section 6
+const section6 = () => {
+    const section6Element = document.querySelector(".section-6");
+    const buttonDetails = section6Element.querySelectorAll(".button-detail");
+    if (buttonDetails.length > 0) {
+        buttonDetails.forEach((buttonDetail) => {
+            buttonDetail.addEventListener("click", (e) => {
+                window.location.href = "../productDetail/";
+            });
+        });
+    }
+}
+section6();
+//end section 6
+
 // section 7
 const validatePhoneNumber2 = (phoneNumber) => {
     const re = /^[0-9]{10}$/;

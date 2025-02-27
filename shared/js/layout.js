@@ -12,6 +12,9 @@ window.onload = () => {
 
 // header
 const header = () => {
+    let isLogin = localStorage.getItem("isLogin");
+    console.log("isLogin: ", isLogin);
+
     const headerElement  = mainContent.querySelector(".inner-header");
     const headerTemplate = `
     <div class="container">
@@ -107,8 +110,15 @@ const header = () => {
                     <i class="fa-solid fa-user"></i>
 
                     <div class="inner-dropdown-user">
-                        <a href="../login/">Đăng nhập</a>
-                        <a href="../register/">Đăng ký</a>
+                        ${isLogin === "true" ? 
+                        `
+                            <a href="../account/">Tài khoản</a>
+                            <a href="../home/" class="inner-logout">Đăng xuất</a>
+                        ` : 
+                        `
+                            <a href="../login/">Đăng nhập</a>
+                            <a href="../register/">Đăng ký</a>
+                        `}
                     </div>
                 </div>
                 <button class="inner-order">
@@ -128,6 +138,15 @@ const header = () => {
                 if (window.location.href.includes(item.href)) {
                     item.classList.add("active");
                 }
+            });
+        }
+
+        // logout
+        const innerLogout = document.querySelector(".inner-logout");
+        if (innerLogout) {
+            innerLogout.addEventListener("click", () => {
+                localStorage.setItem("isLogin", "false");
+                window.location.href = "../login/";
             });
         }
 
@@ -166,6 +185,19 @@ const header = () => {
                 }
             });
         }
+
+        const innerUser = document.querySelector(".inner-user");
+        const innerDropdownUser = document.querySelector(".inner-dropdown-user");
+        innerUser.addEventListener("click", (event) => {
+            innerDropdownUser.style.display = "block";
+            event.stopPropagation();
+        });
+
+        document.addEventListener("click", (event) => {
+            if (!innerDropdownUser.contains(event.target) && !innerUser.contains(event.target)) {
+                innerDropdownUser.style.display = "none";
+            }
+        });
     }
 }
 header();

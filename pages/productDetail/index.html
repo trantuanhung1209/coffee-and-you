@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../../assets/images/logo/logo-cup.png" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="productDetail.css">
     <title>Chi tiết sản phẩm</title>
 </head>
+
 <body>
     <!-- Loading Screen -->
     <div id="loading-screen">
@@ -22,46 +25,315 @@
 
     <div class="main-content" id="main-content" style="display: none;">
         <!-- header -->
-        <header class="inner-header">
-            productDetail
-        </header>
-        <!-- end header --> 
+        <header class="inner-header"></header>
+        <!-- end header -->
 
         <!-- main -->
         <main class="inner-main">
-
-            <!-- popup -->
-            <div class="section-popup" id="popup">
-                <div class="inner-popup-content">
-                    <div class="inner-popup-header">
-                        <h2>
-                            Thông báo
-                        </h2>
-                        <button class="inner-popup-close">
-                            <i class="fas fa-times"></i>
-                        </button>
-                    </div>
-                    <div class="inner-popup-body">
-
-                    </div>
+            <!-- breadCum -->
+            <div class="inner-breadcumb">
+                <div class="container ">
+                    <ul class="breadcumb m-0 py-3 d-flex gap-2 list-unstyled">
+                        <li>
+                            <a href="../../index.html" style="color: var(--color-secondary);">Trang chủ</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-angle-right" style="color: var(--color-secondary);"></i>
+                        </li>
+                        <li>
+                            <a href="#" style="color: var(--color-button-hover);">Thông tin sản phẩm</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
-            <!-- end popup-->
-        </main>
-        <!-- end main -->
+            <!-- end breadCum -->
 
-        <!-- footer -->
-        <footer class="inner-footer"></footer>
-        <!-- end footer -->
+            <section class="section-1 py-5">
+                <div class="container">
+                    <div class="inner-wrap row">
+                        <div class="inner-left col-9">
+                            <div class="inner-top inner-left-top">
+                                <div class="inner-wrap row">
+                                    <div class="inner-image col-5">
+                                        <img src="../../assets/images/products/bourbonjungleproduktbild5721x3-9162173b-31d3-46b2-a303-56f78b557aca.jpg"
+                                            alt="Salad rau mùa sốt mác mác">
+                                    </div>
+                                    <div class="inner-content col-7">
+                                        <h2 class="inner-title" title="Salad rau mùa sốt mác mác">
+                                            Cà Phê G7 3 in 1
+                                        </h2>
+                                        <div class="inner-price">
+                                            <p class="inner-new-price">
+                                                115.000₫
+                                            </p>
 
-        <!-- copy right -->
-        <div class="inner-copy-right"></div>
-        <!-- end copy right -->
+
+                                        </div>
+                                        <div class="inner-action">
+                                            <div class="quantity-selector">
+                                                <label for="quantity">Số lượng:</label>
+                                                <div class="inner-button-input">
+                                                    <button class="quantity-btn" id="decrease">-</button>
+                                                    <input type="number" id="quantity" value="1" min="1">
+                                                    <button class="quantity-btn" id="increase">+</button>
+                                                </div>
+                                            </div>
+
+                                            <div class="inner-button row gap-2">
+                                                <button class="inner-button-add col-5" id="2">
+                                                    <i class="fas fa-cart-plus"></i>
+                                                    Thêm vào giỏ hàng
+                                                </button>
+                                                <a href="../order/" class="inner-button-order col-5">
+                                                    Đặt bàn tại đây
+                                                </a>
+                                            </div>
+                                        </div>
+
+                                        <div class="inner-voucher">
+                                            <div class="inner-voucher-title">
+                                                <i class="fas fa-gift"></i>
+                                                <span>Ưu đãi</span>
+                                            </div>
+                                            <div class="inner-voucher-content">
+                                                <ul>
+                                                    <li>
+                                                        <i class="fas fa-check"></i>
+                                                        <span>Giảm giá 10% cho hóa đơn từ 200.000₫</span>
+                                                    </li>
+                                                    <li>
+                                                        <i class="fas fa-check"></i>
+                                                        <span>Giảm giá 20% cho hóa đơn từ 500.000₫</span>
+                                                    </li>
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="inner-bottom inner-left-bottom">
+                                <ul>
+                                    <li>
+                                        <h3 class="inner-title">
+                                            Mô tả sản phẩm
+                                        </h3>
+                                    </li>
+                                </ul>
+                                <div class="inner-description">
+                                    <p>
+                                        Nguyên liệu để pha cà phê Espresso Để có một ly Espresso hoàn hảo, luôn bắt đầu
+                                        bằng
+                                        các hạt cà phê chất lượng cao nhất được rang hơi sẩm màu (rang đậm). Qua cách
+                                        pha
+                                        dưới áp suất, axít tự nhiên của hạt cà phê bị hòa tan nhanh hơn các phương pháp
+                                        pha
+                                        chế thông thường rất nhiều điều này sẽ làm cho ly cà phê có vị chua khó chịu. Để
+                                        giảm bớt vị chua khó chịu này người ta sẽ rang hạt cà phê lâu hơn, do hàm lượng
+                                        axít
+                                        giảm đi khi rang hạt cà phê. Thường...
+                                    </p>
+                                    <h3>
+                                        Nguyên liệu để pha cà phê Espresso
+                                    </h3>
+                                    <p>
+                                        Để có một ly Espresso hoàn hảo, luôn bắt đầu bằng các hạt cà phê chất lượng cao
+                                        nhất
+                                        được rang hơi sẩm màu (rang đậm). Qua cách pha dưới áp suất, axít tự nhiên của
+                                        hạt
+                                        cà phê bị hòa tan nhanh hơn các phương pháp pha chế thông thường rất nhiều điều
+                                        này
+                                        sẽ làm cho ly cà phê có vị chua khó chịu. Để giảm bớt vị chua khó chịu này người
+                                        ta
+                                        sẽ rang hạt cà phê lâu hơn, do hàm lượng axít giảm đi khi rang hạt cà phê.
+                                    </p>
+                                    <p>
+                                        Thường loại cà phê Arabica (Coffea arabica) có chất lượng cao được dùng làm cà
+                                        phê
+                                        espresso. Để cà phê espresso có crema nhiều và đặc hơn người ta pha trộn hạt cà
+                                        phê
+                                        Arabia với Robusta (Coffea canephora), loại này không có được hương thơm và vị
+                                        đậm
+                                        đà như Arabica. Những người trong giới sành điệu vẫn cãi nhau sôi nổi là 100%
+                                        Arabica hay phương thức pha trộn 60% Arabica và 40% Robusta sẽ mang lại một ly
+                                        cà
+                                        phê espresso hoàn hảo.
+                                    </p>
+                                    <h3>
+                                        Cách pha Espresso
+                                    </h3>
+                                    <p>
+                                        Để có một ly cà phê Espresso thơm ngon người ta cần đến loại máy pha chuyên
+                                        dụng,
+                                        tuy nhiên nếu do điều kiện bạn chưa có được sự trải nghiệm với chiếc máy pha thì
+                                        có
+                                        thể làm theo kiểu cổ điển bằng cách dùng một loại bình pha có tên “Moka Pot” hay
+                                        “Moka Express” (xem hình)
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="inner-right col-3">
+                            <div class="inner-top inner-right-top">
+                                <div class="inner-title">
+                                    <h3>
+                                        Có thể bạn đang tìm
+                                    </h3>
+                                </div>
+                                <div class="inner-list">
+
+                                    <div class="inner-item">
+                                        <div class="inner-image">
+                                            <a href="#">
+                                                <img src="../../assets/images/products/bellaproduktbild5721x3455326x5-187fb7cc-7aa1-40b8-b27d-0e896bf519f3.jpg"
+                                                    alt="">
+                                            </a>
+                                        </div>
+                                        <div class="inner-content">
+                                            <h4 class="inner-name">
+                                                <a href="#" title="">
+                                                    Cà phê SÁNG TẠO 8
+                                                </a>
+                                            </h4>
+                                            <p class="inner-price">
+                                                185.000₫
+                                            </p>
+                                            <button class="inner-button" id="6">
+                                                Đặt món
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="inner-item">
+                                        <div class="inner-image">
+                                            <a href="#">
+                                                <img src="../../assets/images/products/bourbonjungleproduktbild5721x3-9162173b-31d3-46b2-a303-56f78b557aca.jpg"
+                                                    alt="Cà phê LEGEND">
+                                            </a>
+                                        </div>
+                                        <div class="inner-content">
+                                            <h4 class="inner-name">
+                                                <a href="#" title="Cà phê LEGEND">
+                                                    Cà phê LEGEND
+                                                </a>
+                                            </h4>
+                                            <p class="inner-price">
+                                                900.000₫
+                                            </p>
+                                            <button class="inner-button" id="5">
+                                                Đặt món
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="inner-item">
+                                        <div class="inner-image">
+                                            <a href="#">
+                                                <img src="../../assets/images/products/buenavistaproduktbild5721x3455.jpg"
+                                                    alt="Hộp quà LEGEND">
+                                            </a>
+                                        </div>
+                                        <div class="inner-content">
+                                            <h4 class="inner-name">
+                                                <a href="#" title="Hộp quà LEGEND">
+                                                    Hộp quà LEGEND
+                                                </a>
+                                            </h4>
+                                            <p class="inner-price">
+                                                960.000₫
+                                            </p>
+                                            <button class="inner-button" id="4">
+                                                Đặt món
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="inner-item">
+                                        <div class="inner-image">
+                                            <a href="#">
+                                                <img src="../../assets/images/products/caravanproduktbild5721x3455326-c84e5abb-aa0f-4f47-8bfc-ee3e74689f70.jpg" alt="Cafe truyền thống">
+                                            </a>
+                                        </div>
+                                        <div class="inner-content">
+                                            <h4 class="inner-name">
+                                                <a href="#" title="Cafe truyền thống">
+                                                    Cafe truyền thống
+                                                </a>
+                                            </h4>
+                                            <p class="inner-price">
+                                                90.000₫
+                                            </p>
+                                            <button class="inner-button" id="3">
+                                                Đặt món
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <div class="inner-item">
+                                        <div class="inner-image">
+                                            <a href="#">
+                                                <img src="../../assets/images/products/ftoproduktbild5721x3455326x540.webp"
+                                                    alt="Capuccino">
+                                            </a>
+                                        </div>
+                                        <div class="inner-content">
+                                            <h4 class="inner-name">
+                                                <a href="#" title="Capuccino">
+                                                    Capuccino
+                                                </a>
+                                            </h4>
+                                            <p class="inner-price">
+                                                250.000₫
+                                            </p>
+                                            <button class="inner-button" id="1">
+                                                Đặt món
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
     </div>
-    
+    </section>
+
+    <!-- popup -->
+    <div class="section-popup" id="popup">
+        <div class="inner-popup-content">
+            <div class="inner-popup-header">
+                <h2>
+                    Thông báo
+                </h2>
+                <button class="inner-popup-close">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <div class="inner-popup-body">
+
+            </div>
+        </div>
+    </div>
+    <!-- end popup-->
+    </main>
+    <!-- end main -->
+
+    <!-- footer -->
+    <footer class="inner-footer"></footer>
+    <!-- end footer -->
+
+    <!-- copy right -->
+    <div class="inner-copy-right"></div>
+    <!-- end copy right -->
+    </div>
+
     <!-- js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <script src="../../shared/js/layout.js"></script>
     <!-- end js -->
 </body>
+
 </html>

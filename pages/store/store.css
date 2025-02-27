@@ -1,2 +1,125 @@
 @import url('../../shared/css/style.css');
 @import url('../../shared/css/variables.css');
+
+.inner-main {
+    padding-top: 90px;
+}
+
+.inner-breadcumb {
+    color: white;
+    background-color: #d7d7d7a1;
+}
+
+.inner-breadcumb ul li a {
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+}
+
+.pSapXep {
+    margin: 10px 0;
+}
+
+.tong {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 30px;
+}
+
+.cha {
+    width: calc((100% - 90px)/4);
+
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+.con2 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #3f3530;
+
+    .chitiet {
+        padding: 40px 15px 20px;
+    }
+}
+
+.con2 .gia {
+    position: absolute;
+    padding: 10px 20px;
+    background-color: #dc8068;
+    top: -16px;
+    left: 10px;
+    color: white;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    p {
+        margin: 0;
+    }
+
+    &:hover {
+        background-color: #c94f2f;
+    }
+}
+
+.con2 .tieude {
+    width: 100%;
+
+    h3 {
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+    }
+}
+
+.con2 .inner-button {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    background-color: #F5F5F5;
+
+    button {
+        width: 50%;
+        padding: 10px 0;
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .btnmuangay {
+        background-color: #5c4543;
+
+        &:hover {
+            background-color: #3f353066;
+            color: white;
+        }
+    }
+
+    .btnchitiet {
+        background-color: #dc8068;
+
+        &:hover {
+            background-color: #c94f2f;
+            color: white;
+        }
+    }
+}
+
+.section-2 {
+    img {
+        width: 100%;
+        object-fit: cover;
+    }
+}
