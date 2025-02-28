@@ -78,6 +78,15 @@
         color: white;
         font-size: 20px;
         font-weight: 600;
+
+        a {
+            color: white;
+            text-decoration: none;
+
+            &:hover {
+                color: #dc8068;
+            }
+        }
     }
 }
 
@@ -108,7 +117,17 @@
     }
 
     .btnchitiet {
+        display: inline-block;
+        text-align: center;
         background-color: #dc8068;
+        width: 50%;
+        padding: 10px 0;
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        border: none;
+        cursor: pointer;
+        transition: all 0.3s ease-in-out;
 
         &:hover {
             background-color: #c94f2f;

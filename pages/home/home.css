@@ -554,6 +554,11 @@
                             background-color: var(--color-button-hover);
                             color: white;
                         }
+                        
+                        a {
+                            color: white;
+                            text-decoration: none;
+                        }
                     }
                 }
             }

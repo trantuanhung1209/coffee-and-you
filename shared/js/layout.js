@@ -1,5 +1,122 @@
 const mainContent = document.querySelector("#main-content");
 
+//data products
+const products = [
+    {
+        id: 1,
+        name: "Cafe Legend",
+        price: 999000,
+        image: "../../assets/images/products/colombiadecafproduktbildhemsid.jpg",
+        description: "Cà phê hòa tan hương vị đậm đà, thơm ngon, đặc biệt phù hợp với người thích hương vị đắng."
+    },
+    {
+        id: 2,
+        name: "Cà phê SÁNG TẠO 8",
+        price: 199000,
+        image: "../../assets/images/products/bellaproduktbild5721x3455326x5-187fb7cc-7aa1-40b8-b27d-0e896bf519f3.jpg",
+        description: "Cà phê hòa tan hương vị đậm đà, thơm ngon, đặc biệt phù hợp với người thích hương vị đắng."
+    },
+    {
+        id: 3,
+        name: "Hộp quà LEGEND",
+        price: 969000,
+        image: "../../assets/images/products/bourbonjungleproduktbild5721x3-9162173b-31d3-46b2-a303-56f78b557aca.jpg",
+        description: "Cà phê hòa tan hương vị đậm đà, thơm ngon, đặc biệt phù hợp với người thích hương vị đắng."
+    },
+    {
+        id: 4,
+        name: "Cà phê Chế Phin Loại 1",
+        price: 960000,
+        image: "../../assets/images/products/buenavistaproduktbild5721x3455.jpg",
+        description: "Cà phê hòa tan hương vị đậm đà, thơm ngon, đặc biệt phù hợp với người thích hương vị đắng."
+    },
+    {
+        id: 5,
+        name: "Cà Phê G7 3 in 1",
+        price: 115000,
+        image: "../../assets/images/products/elsalvadormenendezproduktbildh-dc68826c-6cf9-4fe6-86f2-15033128576b.jpg",
+        description: "Cà phê hòa tan hương vị đậm đà, thơm ngon, đặc biệt phù hợp với người thích hương vị đắng."
+    },
+    {
+        id: 6,
+        name: "Cafe chồn",
+        price: 999000,
+        image: "../../assets/images/products/esperanzaproduktbild5700x34553-48d8cf11-46d5-4ee2-978d-cb640f1f7364.jpg",
+        description: "Cà phê hòa tan hương vị đậm đà, thơm ngon, đặc biệt phù hợp với người thích hương vị đắng."
+    },
+    {
+        id: 7,
+        name: "Cafe Latte",
+        price: 100000,
+        image: "../../assets/images/products/ethiopiagujiproduktbildhemsida-91aadddb-8d8d-4139-a367-a8dbc3b65ebe.jpg",
+        description: "Cà phê hòa tan hương vị đậm đà, thơm ngon, đặc biệt phù hợp với người thích hương vị đắng."
+    },
+    {
+        id: 8,
+        name: "Cafe Espresso",
+        price: 99000,
+        image: "../../assets/images/products/ethiopiagujiproduktbildhemsida-91aadddb-8d8d-4139-a367-a8dbc3b65ebe.jpg",
+        description: "Cà phê hòa tan hương vị đậm đà, thơm ngon, đặc biệt phù hợp với người thích hương vị đắng."
+    },
+    {
+        id: 9,
+        name: "Cafe truyền thống",
+        price: 990000,
+        image: "../../assets/images/products/ethiopiagujiproduktbildhemsida-91aadddb-8d8d-4139-a367-a8dbc3b65ebe.jpg",
+        description: "Cà phê hòa tan hương vị đậm đà, thơm ngon, đặc biệt phù hợp với người thích hương vị đắng."
+    }
+];
+// end data products
+
+// render product search
+const renderProductSearch = async (content) => {
+    try {
+        // Lọc dữ liệu theo nội dung tìm kiếm
+        const dataSearch = products.filter(item => item.name.toLowerCase().includes(content.toLowerCase()));
+
+        // Lấy phần tử .inner-search-result
+        const innerSearchResult = document.querySelector(".inner-search-result");
+        if (innerSearchResult) {
+            // Tạo nội dung template cho kết quả tìm kiếm
+            const innerSearchResultTemplate = `
+            <h3 class="inner-title">
+                Kết quả tìm kiếm: 
+            </h3>
+            <div class="inner-list-result">
+                ${dataSearch.splice(0,2).map(item => `
+                <div class= "inner-item">
+                    <div class="inner-image">
+                        <a href="../productDetail/?id=${item.id}">
+                            <img src=${item.image} alt='${item.name}' />
+                        </a>
+                    </div>
+                    
+                    <div class="inner-text">
+                        <h3 class="inner-name">
+                            <a href="../productDetail/?id=${item.id}">${item.name}</a>
+                        </h3>
+                        <p class="inner-price">
+                            ${item.price.toLocaleString()}đ
+                        </p>
+                    </div>
+                </div>
+                `).join('')}
+            </div>
+            <a href="../search/?content=${content}" class="inner-extra">
+                Xem tất cả kết quả tìm kiếm
+            </a>
+            `;
+
+            // Hiển thị kết quả tìm kiếm
+            innerSearchResult.innerHTML = innerSearchResultTemplate;
+            innerSearchResult.style.display = "block";
+        }
+    } catch (error) {
+        console.error("Failed to fetch product data:", error);
+    }
+};
+// end render product search
+
 // loader
 window.onload = () => {
     // Giải phóng màn hình loading sau khi trang đã load xong
@@ -57,6 +174,7 @@ const header = () => {
                                 <i class="fa-solid fa-magnifying-glass"></i>
                             </a>
                         </form>
+                        <div class="inner-search-result"></div>
                     </div>
                 </div>
                 <div class="inner-cart">
@@ -164,6 +282,32 @@ const header = () => {
                 innerSearchBox.style.display = "none";
             }
         });
+        const innerFormSearch = document.querySelector(".inner-form-search");
+            if (innerFormSearch) {
+                const innerSearchButton = document.querySelector(".inner-search-button");
+
+                innerSearchButton.addEventListener("click", (e) => {
+                    e.preventDefault();
+                    const content = innerFormSearch.querySelector("input[name='content']");
+                    window.location.href = `../search/?content=${content.value}`;
+                });
+
+                // Xử lý sự kiện nhấn Enter
+                const contentInput = innerFormSearch.querySelector("input[name='content']");
+                contentInput.addEventListener("keypress", (e) => {
+                    if (e.key === "Enter") {
+                        e.preventDefault();
+                        window.location.href = `../search/?content=${contentInput.value}`;
+                    }
+                });
+
+                innerFormSearch.addEventListener("input", (e) => {
+                    e.preventDefault();
+                    const content = innerFormSearch.querySelector("input[name='content']");
+                    renderProductSearch(content.value);
+                });
+            }
+        // end search
 
         const innerOrder = document.querySelector(".inner-order");
         if (innerOrder) {

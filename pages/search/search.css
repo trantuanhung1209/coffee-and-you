@@ -1,0 +1,151 @@
+@import url('../../shared/css/style.css');
+@import url('../../shared/css/variables.css');
+
+.inner-main {
+    padding-top: 90px;
+}
+
+.inner-breadcumb {
+    color: white;
+    background-color: #d7d7d7a1;
+}
+
+.inner-breadcumb ul li a {
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.section-1 {
+
+    .inner-title {
+        h1 {
+            font-size: 30px;
+            font-family: var(--font-title);
+            color: var(--color-primary);
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+    }
+
+    .inner-list-product {
+
+        .inner-wrap {
+            display: flex;
+            gap: 30px;
+            align-items: center;
+            flex-wrap: wrap;
+
+            .inner-item {
+                width: calc((100% - 90px) / 4);
+                padding: 0 10px;
+
+                .inner-image {
+                    width: 100%;
+                    height: auto;
+                    position: relative;
+
+                    img {
+                        width: 100%;
+                        height: auto;
+                        object-fit: cover;
+                    }
+
+                    .inner-button-contact {
+                        position: absolute;
+                        left: 10px;
+                        bottom: -20px;
+                        padding: 10px 20px;
+                        background-color: var(--color-primary);
+                        color: white;
+                        text-transform: uppercase;
+                        font-family: var(--font-main);
+                        transition: all 0.3s ease-in-out;
+                        border-radius: 8px;
+
+                        a {
+                            color: white;
+                            text-decoration: none;
+                        }
+
+                        &:hover {
+                            background-color: var(--color-button-hover);
+                        }
+
+
+                    }
+                }
+
+                .inner-content {
+                    background-color: #3f3530;
+                    padding: 40px 15px 20px;
+
+                    h2 {
+                        font-size: 30px;
+                        font-family: var(--font-main);
+                        color: white;
+                        font-size: 16px;
+
+                        a {
+                            color: white;
+                            text-decoration: none;
+
+                            &:hover {
+                                color: var(--color-primary);
+                            }
+                        }
+                    }
+
+                    .inner-desc {
+                        font-size: 14px;
+                        color: var(--color-primary);
+                    }
+                }
+
+                .inner-button {
+                    width: 100%;
+                    display: flex;
+                    align-items: center;
+
+                    button {
+                        width: 50%;
+                        background-color: transparent;
+                        padding: 6px 0;
+                        border: none;
+                        text-transform: uppercase;
+                        transition: all 0.3s ease-in-out;
+                        text-align: center;
+                        cursor: pointer;
+                        color: white;
+
+                        &:active {
+                            transform: scale(0.9);
+                        }
+                    }
+
+                    .button-buy {
+                        background-color: #5c4543;
+
+                        &:hover {
+                            background-color: #3f353066;
+                            color: white;
+                        }
+                    }
+
+                    .button-detail {
+                        background-color: var(--color-primary);
+
+                        &:hover {
+                            background-color: var(--color-button-hover);
+                            color: white;
+                        }
+
+                        a {
+                            color: white;
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
