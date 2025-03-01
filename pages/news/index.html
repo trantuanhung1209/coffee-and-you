@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="../../assets/images/logo/logo-cup.png" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="stylesheet" href="news.css">
     <title>Tin tức</title>
 </head>
+
 <body>
     <!-- Loading Screen -->
     <div id="loading-screen">
@@ -22,13 +25,195 @@
 
     <div class="main-content" id="main-content" style="display: none;">
         <!-- header -->
-        <header class="inner-header">
-            news
-        </header>
-        <!-- end header --> 
+        <header class="inner-header"></header>
+        <!-- end header -->
 
         <!-- main -->
         <main class="inner-main">
+            <!-- breadCum -->
+            <div class="inner-breadcumb">
+                <div class="container ">
+                    <ul class="breadcumb m-0 py-3 d-flex gap-2 list-unstyled">
+                        <li>
+                            <a href="../../index.html" style="color: var(--color-secondary);">Trang chủ</a>
+                        </li>
+                        <li>
+                            <i class="fas fa-angle-right" style="color: var(--color-secondary);"></i>
+                        </li>
+                        <li>
+                            <a href="#" style="color: var(--color-button-hover);">Tin tức</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- end breadCum -->
+
+            <section class="section-1 py-5">
+                <div class="container">
+                    <div class="inner-image">
+                        <img src="../../assets/images/articles/mrcoffee.webp" alt="mr.coffee">
+                    </div>
+
+                    <div class="inner-content py-5">
+                        <h2 class="inner-title">
+                            Tin tức
+                        </h2>
+                        <p class="inner-desc">
+                            Giữa Sài Gòn đô thị phồn hoa luôn sống nhanh và hối hả, đôi khi chúng ta cần tìm lại một nơi
+                            để có một khoảng lặng cho riêng mình, hay cùng với người bạn đời của mình ngồi với nhau
+                            trong một khu vườn cổ tích đầy mộng mơ. Mình biết một nơi sẽ cho bạn lại một cảm giác này
+                            đó, hãy cùng mình tới đây xem thử nhé!
+                        </p>
+
+                        <div class="inner-list-article">
+                            <div class="inner-item">
+                                <div class="inner-image">
+                                    <img src="../../assets/images/articles/mrcoffee.webp" alt="">
+                                </div>
+                                <div class="inner-content">
+                                    <h2 class="inner-title">
+                                        <a href="../article/?id=1">
+                                            Văn hóa uống cà phê của người Sài Gòn lên báo Anh
+                                        </a>
+                                    </h2>
+                                    <p class="inner-desc">
+                                        Bài viết trên tờ Telegraph (Anh) nhận định văn hóa thưởng thức cà phê ở TPHCM không giống như ở bất cứ nơi nào khác trên thế giới. Ở đây, cà phê là thức uống đem lại năng lượng cho người dân của cả một thành phố sôi động. Điều đầu tiên một du khách cần phải học khi đặt chân tới TPHCM, đó là biết cách qua đường. Đó là một thử thách hóc búa đòi hỏi cả sự liều lĩnh lẫn...
+                                    </p>
+                                    <div class="inner-bottom">
+                                        <div class="inner-author">
+                                            <div class="inner-image">
+                                                <img src="../../assets/images/avatar/avar.jpeg" alt="">
+                                            </div>
+                                            <div class="inner-name">
+                                                Admin: <span>Hune</span>
+                                            </div>
+                                        </div>
+                                        <div class="inner-readmore">
+                                            <a href="../article/?id=1">Xem thêm</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="inner-item">
+                                <div class="inner-image">
+                                    <img src="../../assets/images/articles/cafe-theme-bizweb.webp" alt="">
+                                </div>
+                                <div class="inner-content">
+                                    <h2 class="inner-title">
+                                        <a href="../article/?id=2">
+                                            Người Thụy Điển thành công hơn nhờ… uống cà phê?
+                                        </a>
+                                    </h2>
+                                    <p class="inner-desc">
+                                        Giữa cuộc sống tất bật này, dừng lại và thưởng thức tinh hoa ẩm thực Fika sẽ khiến cho chúng ta quên đi mọi áp lực và muộn phiền. Người Thụy Điển luôn làm vậy… Thụy Điển là quốc gia duy nhất ở Bắc Âu có hẳn một phong cách thưởng thức cà phê cho riêng mình. Có tên là Fika, đây là một phong tục mà mọi người thường tụ tập để ăn uống và nói chuyện. Fika cũng thường được dùng...
+                                    </p>
+                                    <div class="inner-bottom">
+                                        <div class="inner-author">
+                                            <div class="inner-image">
+                                                <img src="../../assets/images/avatar/avar.jpeg" alt="">
+                                            </div>
+                                            <div class="inner-name">
+                                                Admin: <span>Hune</span>
+                                            </div>
+                                        </div>
+                                        <div class="inner-readmore">
+                                            <a href="../article/?id=2">Xem thêm</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="inner-item">
+                                <div class="inner-image">
+                                    <img src="../../assets/images/articles/giao-dien-coffee.webp" alt="">
+                                </div>
+                                <div class="inner-content">
+                                    <h2 class="inner-title">
+                                        <a href="../article/?id=3">
+                                            Không chỉ giảm ung thư, cà phê có nhiều lợi cho sức khỏe hơn bạn tưởng
+                                        </a>
+                                    </h2>
+                                    <p class="inner-desc">
+                                        Uống cafe trước kia được cho là gây ra một số tác hại. Nhưng sự thật là bạn nên nghĩ lại về điều này. Gần đây thôi, đã từng có một nghiên cứu cho rằng uống cafe sẽ giúp chúng ta giảm được nguy cơ ung thư ruột và đặc biệt là ung thư đại trực tràng. Tuy vậy, đây là phương pháp còn gây e ngại cho nhiều người, việc uống quá nhiều cafe từ lâu đã được coi là không...
+                                    </p>
+                                    <div class="inner-bottom">
+                                        <div class="inner-author">
+                                            <div class="inner-image">
+                                                <img src="../../assets/images/avatar/avar.jpeg" alt="">
+                                            </div>
+                                            <div class="inner-name">
+                                                Admin: <span>Hune</span>
+                                            </div>
+                                        </div>
+                                        <div class="inner-readmore">
+                                            <a href="../article/?id=3">Xem thêm</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="inner-item">
+                                <div class="inner-image">
+                                    <img src="../../assets/images/articles/theme-coffee.webp" alt="">
+                                </div>
+                                <div class="inner-content">
+                                    <h2 class="inner-title">
+                                        <a href="../article/?id=4">
+                                            Cách phân biệt cà phê thật và cafe giả
+                                        </a>
+                                    </h2>
+                                    <p class="inner-desc">
+                                        Làm thế nào để biết cà phê bạn mua về thực sự là loại cà phê thật? Và làm sao để phân biết đâu là một sản phẩm cà phê nguyên chất, cà phê thật tốt cho sức khỏe? Cà phê là một loại hạt rất đặc biệt, và khác biệt, có thể dễ dàng phân biệt cà phê nguyên chất và cà phê giả, bột cà phê thật với bột của các loại hạt ngũ cốc khác. Để bảo đảm cho sức khỏe và...
+                                    </p>
+                                    <div class="inner-bottom">
+                                        <div class="inner-author">
+                                            <div class="inner-image">
+                                                <img src="../../assets/images/avatar/avar.jpeg" alt="">
+                                            </div>
+                                            <div class="inner-name">
+                                                Admin: <span>Hune</span>
+                                            </div>
+                                        </div>
+                                        <div class="inner-readmore">
+                                            <a href="../article/?id=4">Xem thêm</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="inner-item">
+                                <div class="inner-image">
+                                    <img src="../../assets/images/articles/theme-coffee-bizweb.webp" alt="">
+                                </div>
+                                <div class="inner-content">
+                                    <h2 class="inner-title">
+                                        <a href="../article/?id=5">
+                                            Say đứ đừ với 5 quán cafe “Sống ảo tung chảo”
+                                        </a>
+                                    </h2>
+                                    <p class="inner-desc">
+                                        1. Nội Phủ Cafe Cùng bắt đầu tour sống ảo với một album ảnh deep khỏi chê theo phong cách quý tộc sang trọng nhé. Mấy hôm nay Nội Phủ Cafe đang được dân tình Phan Thiết "rần rần" săn lùng vì những góc chụp theo kiểu nội cung bí hiểm đầy mới lạ. Bỏ túi ngay địa chỉ quán để cuối tuần qua check in nghen bà con ! 2. The Fox Coffee Bước vào quán là đúng kiểu “chất lừ” từ cái...
+                                    </p>
+                                    <div class="inner-bottom">
+                                        <div class="inner-author">
+                                            <div class="inner-image">
+                                                <img src="../../assets/images/avatar/avar.jpeg" alt="">
+                                            </div>
+                                            <div class="inner-name">
+                                                Admin: <span>Hune</span>
+                                            </div>
+                                        </div>
+                                        <div class="inner-readmore">
+                                            <a href="../article/?id=5">Xem thêm</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             <!-- popup -->
             <div class="section-popup" id="popup">
@@ -58,10 +243,13 @@
         <div class="inner-copy-right"></div>
         <!-- end copy right -->
     </div>
-    
+
     <!-- js -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
     <script src="../../shared/js/layout.js"></script>
     <!-- end js -->
 </body>
+
 </html>

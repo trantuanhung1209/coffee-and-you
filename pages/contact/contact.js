@@ -4,6 +4,8 @@ const validateEmail = (email) => {
 };
 const section1 = () => {
     const innerFormContact = document.querySelector('.inner-form-contact');
+    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    const isLogin = JSON.parse(localStorage.getItem('isLogin'));
     if (innerFormContact) {
         innerFormContact.addEventListener('submit', (e) => {
             e.preventDefault();

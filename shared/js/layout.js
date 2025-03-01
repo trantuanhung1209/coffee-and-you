@@ -188,13 +188,13 @@ const header = () => {
                         <div class="inner-list-product">
                             <div class="inner-item">
                                 <div class="inner-image">
-                                    <a href="../productDetail/">
+                                    <a href="../productDetail/?id=1">
                                         <img src="../../assets/images/products/colombiadecafproduktbildhemsid.jpg" alt='' />
                                     </a>
                                 </div>
                                 <div class="inner-text">
                                     <h3 class="inner-name">
-                                        <a href="../productDetail/">Cafe Legend</a>
+                                        <a href="../productDetail/?id=1">Cafe Legend</a>
                                     </h3>
                                     <p class="inner-quantity">
                                         Số lượng: 12
