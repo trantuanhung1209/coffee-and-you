@@ -121,6 +121,24 @@ const renderProducts = (products) => {
     }
 }
 renderProducts(productsStore);
+
+// Intersection Observer API
+const innerListProduct = document.getElementById("inner-list-product");
+console.log(innerListProduct);
+document.addEventListener("DOMContentLoaded", function () {
+    const observer = new IntersectionObserver(
+        (entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("animate");
+                }
+            });
+        },
+        { threshold: 0.2 } // Kích hoạt khi 20% phần tử xuất hiện trong viewport
+    );
+
+    observer.observe(innerListProduct);
+});
 //end render products
 
 // sorter

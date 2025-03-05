@@ -20,6 +20,17 @@
     margin: 10px 0;
 }
 
+#inner-list-product {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+#inner-list-product.animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 .tong {
     display: flex;
     flex-wrap: wrap;

@@ -173,6 +173,22 @@ const section6 = () => {
     if (section6Element) {
         section6Element.innerHTML = section6Template;
     }
+
+    document.addEventListener("DOMContentLoaded", function () {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                    }
+                });
+            },
+            { threshold: 0.2 } // Kích hoạt khi 20% phần tử xuất hiện trong viewport
+        );
+    
+        observer.observe(section6Element);
+    });
+    
 }
 section6();
 //end section 6

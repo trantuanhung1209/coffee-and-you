@@ -143,5 +143,19 @@ const renderProducts = () => {
     if (section1) {
         section1.innerHTML = section1Template;
     }
+    document.addEventListener("DOMContentLoaded", function () {
+        const observer = new IntersectionObserver(
+            (entries) => {
+                entries.forEach((entry) => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("show");
+                    }
+                });
+            },
+            { threshold: 0.2 }
+        );
+    
+        observer.observe(section1);
+    });
 };
 renderProducts();
