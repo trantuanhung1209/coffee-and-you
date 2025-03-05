@@ -4,6 +4,7 @@
 const section1 = () => {
     const section1Element = document.querySelector('.section-1');
     const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+    const users = JSON.parse(localStorage.getItem('users'));
     const section1Template = `
     <div class="container">
         <div class="center">
@@ -70,6 +71,12 @@ const section1 = () => {
                             if (newPass !== oldPass) {
                                 currentUser.password = newPass;
                                 localStorage.setItem('currentUser', JSON.stringify(currentUser));
+                                users.forEach(user => {
+                                    if (user.email === currentUser.email) {
+                                        user.password = newPass;
+                                    }
+                                });
+                                localStorage.setItem('users', JSON.stringify(users));
                                 alert('Đổi mật khẩu thành công!');
                                 formChangePass.reset();
                                 window.location.href = '../login/';

@@ -374,12 +374,12 @@ const footer = () => {
                     </a>
                 </li>
                 <li>
-                    <a href="../store/">
+                    <a href="../about/">
                         Giới thiệu
                     </a>
                 </li>
                 <li>
-                    <a href="../about/">
+                    <a href="../store/">
                         Cửa hàng 
                     </a>
                 </li>
