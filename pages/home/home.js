@@ -183,7 +183,7 @@ const section6 = () => {
                     }
                 });
             },
-            { threshold: 0.2 } // Kích hoạt khi 20% phần tử xuất hiện trong viewport
+            { threshold: 0.1 } // Kích hoạt khi 20% phần tử xuất hiện trong viewport
         );
     
         observer.observe(section6Element);
