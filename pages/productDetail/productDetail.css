@@ -165,6 +165,12 @@
                                 background-color: #c72f2fb7;
                             }
                         }
+
+                        .inner-button-add {
+                            @media screen and (max-width: 575.98px) {
+                                width: 96%;
+                            }
+                        }
                     }
                 }
 

@@ -136,6 +136,10 @@ const header = () => {
     const headerTemplate = `
     <div class="container">
         <div class="inner-wrap">
+            <div class="inner-menu-res">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+
             <div class="inner-logo">
                 <a href="../home/">
                     <img src="../../assets/images/logo/logo-main.png" alt="coffee">
@@ -340,6 +344,19 @@ const header = () => {
         document.addEventListener("click", (event) => {
             if (!innerDropdownUser.contains(event.target) && !innerUser.contains(event.target)) {
                 innerDropdownUser.style.display = "none";
+            }
+        });
+
+        // menu responsive
+        const innerMenuRes = document.querySelector(".inner-menu-res");
+        const innerMenu = document.querySelector(".inner-menu");
+        innerMenuRes.addEventListener("click", () => {
+            innerMenu.classList.toggle("active");
+        });
+
+        document.addEventListener("click", (event) => {
+            if (!innerMenu.contains(event.target) && !innerMenuRes.contains(event.target)) {
+                innerMenu.classList.remove("active");
             }
         });
     }

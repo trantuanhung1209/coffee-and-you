@@ -40,6 +40,22 @@
     .inner-middle {
         border-bottom: 1px dashed var(--color-secondary);
 
+        .row {
+            @media screen and (max-width: 991.98px) {
+                flex-wrap: wrap !important;
+            }
+
+            .col-6 {
+                @media screen and (max-width: 991.98px) {
+                    width: 100% !important;
+                }
+
+                iframe {
+                    width: 100%;
+                }
+            }
+        }
+
         .inner-location {
             display: flex;
             margin-bottom: 20px;

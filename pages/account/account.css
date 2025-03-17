@@ -19,8 +19,12 @@
     
     .center {
         display: flex;
-        flex: 1;
-    
+        gap: 50px;
+
+        @media screen and (max-width: 991.98px) {
+            flex-wrap: wrap;
+        }
+        
         .left {
             a {
                 text-decoration: none;
@@ -69,8 +73,6 @@
                     transform: scale(0.98);
                 }
             }
-    
-            margin-left: 200px;
         }
     }
     

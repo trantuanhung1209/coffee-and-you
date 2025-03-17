@@ -108,9 +108,20 @@
         gap: 20px;
         align-items: center;
 
+        @media screen and (max-width: 767.98px) {
+            flex-wrap: wrap;
+        }
+
         .inner-item {
             width: calc((100% - 90px) / 4);
-            height: 200px;
+
+            @media screen and (max-width: 767.98px) {
+                width: calc((100% - 30px) / 2);
+            }
+
+            @media screen and (max-width: 575.98px) {
+                width: 100%;
+            }
 
             .inner-image {
                 width: 100%;

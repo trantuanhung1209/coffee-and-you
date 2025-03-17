@@ -32,7 +32,7 @@ const articles = [
         id: 5,
         title: 'Say đứ đừ với 5 quán cafe “Sống ảo tung chảo”',
         content: 'Cùng bắt đầu tour sống ảo với một album ảnh deep khỏi chê theo phong cách quý tộc sang trọng nhé. Mấy hôm nay Nội Phủ Cafe đang được dân tình Phan Thiết "rần rần" săn lùng vì những góc chụp theo kiểu nội cung bí hiểm đầy mới lạ. Bỏ túi ngay địa chỉ quán để cuối tuần qua check in nghen bà con !Bước vào quán là đúng kiểu “chất lừ” từ cái nhìn đầu tiên luôn nhé. Quán theo mô hình cafe container kết hợp vô cùng sáng tạo. Kết cấu khối của container tạo nên những khối màu riêng biệt với cách decor phá cách đến từng chi tiết tạo nên sự một không gian tổng thể độc đáo, màu sắc lên hình cực chuẩn. Sống ảo ở đây thì đảm bảo “dư chất” rồi bà con nhỉ?Làm thế nào để biết cà phê bạn mua về thực sự là loại cà phê thật? Và làm sao để phân biết đâu là một sản phẩm cà phê nguyên chất, cà phê thật tốt cho sức khỏe? Cà phê là một loại hạt rất đặc biệt, và khác biệt, có thể dễ dàng phân biệt cà phê nguyên chất và cà phê giả, bột cà phê thật với bột của các loại hạt ngũ cốc khác. Để bảo đảm cho sức khỏe và khẩu vị thưởng thức cà phê đích thực của chính bạn, bạn cần ghi nhớ vài chi tiết căn bản về thuộc tính của hạt cà phê rang rất khác với các loại hạt rang khác và bột của chúng:',
-        image: '../../assets/images/articles/theme-coffee.webp',
+        image: '../../assets/images/articles/cafe-colette-gallery-09.webp',
         date: '05/03/2025',
     },
 ];

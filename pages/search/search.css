@@ -38,9 +38,22 @@
             align-items: center;
             flex-wrap: wrap;
 
+            @media screen and (max-width: 991.98px) {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
             .inner-item {
                 width: calc((100% - 90px) / 4);
                 padding: 0 10px;
+
+                @media screen and (max-width: 991.98px) {
+                    width: calc((100% - 40px) / 3);
+                }
+
+                @media screen and (max-width: 767.98px) {
+                    width: calc((100% - 20px) / 2);
+                }
 
                 .inner-image {
                     width: 100%;
