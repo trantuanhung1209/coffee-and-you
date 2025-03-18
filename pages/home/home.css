@@ -9,6 +9,15 @@
 .section-1 {
     overflow: hidden;
     animation: wave-pop 1.5s ease-out, fade-in 1s ease-in-out;
+
+    .carousel-item {
+        img {
+            width: 100%;
+            height: auto;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
 }
 
 @keyframes wave-pop {
