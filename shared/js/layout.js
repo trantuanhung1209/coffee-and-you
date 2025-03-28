@@ -539,6 +539,13 @@ const popupModalOrder = () => {
                 if (!date) {
                     alert("Vui lòng chọn ngày đặt bàn");
                     return;
+                } else {
+                    const currentDate = new Date();
+                    const selectedDate = new Date(date);
+                    if (selectedDate < currentDate) {
+                        alert("Ngày đặt bàn đã qua, vui lòng chọn ngày khác");
+                        return;
+                    }
                 }
 
                 if (!time) {
@@ -552,7 +559,7 @@ const popupModalOrder = () => {
                 }
 
                 if (!phone || !validatePhoneNumber(phone)) {
-                    alert("Vui lòng nhập số điện thoại hợp lệ");
+                    alert("Vui lòng nhập số điện thoại hợp lệ và ít nhất 10 số");
                     return;
                 }
 

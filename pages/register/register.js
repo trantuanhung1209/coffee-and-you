@@ -5,6 +5,12 @@ function validateEmail2(email) {
     return emailRegex.test(email);
 }
 
+function validatePhoneNumber2(phoneNumber) {
+    const phoneNumberRegex = /^\d{10}$/;
+    return phoneNumberRegex.test(phoneNumber);
+}
+
+
 const register = () => {
     const section1 = mainElement.querySelector('.section-1');
     if (section1) {
@@ -19,6 +25,11 @@ const register = () => {
 
             if (!validateEmail2(email)) {
                 alert('Email không hợp lệ');
+                return;
+            }
+
+            if (!validatePhoneNumber2(phoneNumber) || phoneNumber.length < 10) {
+                alert('Số điện thoại không hợp lệ và ít nhất 10 số');
                 return;
             }
 
